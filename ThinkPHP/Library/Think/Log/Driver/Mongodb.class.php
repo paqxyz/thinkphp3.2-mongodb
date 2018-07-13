@@ -43,7 +43,8 @@ class Mongodb {
             'module'=>$log_dir,
             'url'=>$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],
             'ip'=> $_SERVER['REMOTE_ADDR'],
-            'message'=>"{$log}"
+            'message'=>"{$log}",
+            'status'=>0
         ];
 
         $errorModel = new php_error_log_model();

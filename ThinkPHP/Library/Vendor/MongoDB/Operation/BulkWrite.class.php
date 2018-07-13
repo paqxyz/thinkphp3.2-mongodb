@@ -211,7 +211,7 @@ class BulkWrite implements Executable
                         throw InvalidArgumentException::invalidType(sprintf('$operations[%d]["%s"][1]', $i, $type), $args[1], 'array or object');
                     }
 
-                    if ( ! \Vendor\MongoDB\is_first_key_operator($args[1])) {
+                    if ( ! \Vendor\MongoDB\Functions::is_first_key_operator($args[1])) {
                         throw new InvalidArgumentException(sprintf('First key in $operations[%d]["%s"][1] is not an update operator', $i, $type));
                     }
 

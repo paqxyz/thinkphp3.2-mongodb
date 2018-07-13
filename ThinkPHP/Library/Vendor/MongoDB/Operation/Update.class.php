@@ -102,7 +102,7 @@ class Update implements Executable
             throw InvalidArgumentException::invalidType('"multi" option', $options['multi'], 'boolean');
         }
 
-        if ($options['multi'] && ! \Vendor\MongoDB\is_first_key_operator($update)) {
+        if ($options['multi'] && ! \Vendor\MongoDB\Functions::is_first_key_operator($update)) {
             throw new InvalidArgumentException('"multi" option cannot be true if $update is a replacement document');
         }
 
